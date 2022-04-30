@@ -1,0 +1,28 @@
+<div class="row mt-5">
+  <div class="col-md-6 col-sm-12 mx-auto">
+    <h2 class="text-center mb-4">LOGIN</h2>
+    <form #f="ngForm" (ngSubmit)="onSubmit(f)">
+      <div class="mb-3">
+        <label for="exampleInputEmail1" class="form-label">Email address</label>
+        <input
+          type="email"
+          class="form-control"
+          name="email"
+          required
+          ngModel
+        />
+      </div>
+      <div class="mb-3">
+        <label for="password" class="form-label">Password</label>
+        <input
+          type="password"
+          class="form-control"
+          name="password"
+          required
+          ngModel
+        />
+      </div>
+      <button type="submit" class="btn btn-primary">Login</button>
+    </form>
+  </div>
+</div>
