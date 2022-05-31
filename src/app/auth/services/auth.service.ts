@@ -1,8 +1,8 @@
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Router } from '@angular/router';
-import { BehaviorSubject, Subject } from 'rxjs';
-import { map, tap } from 'rxjs/operators';
+import { BehaviorSubject } from 'rxjs';
+import { map } from 'rxjs/operators';
 import { User } from '../models/user.model';
 
 interface LoginData {
@@ -68,10 +68,6 @@ export class AuthService {
         }
       });
   }
-
-  // loggedIn() {
-  //   return !this.tokenExpired();
-  // }
 
   tokenExpired() {
     if (this.tokenExp < new Date()) {
